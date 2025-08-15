@@ -21,8 +21,9 @@ Talk about your design approach and methodology.
 
 ## Gallery
 
-{% assign gallery_images = site.data.galleries.sample-project %}
-{% include gallery.html images=gallery_images %}
+<!-- Gallery will be added here when you have images -->
+<!-- {% assign gallery_images = site.data.galleries.sample-project %} -->
+<!-- {% include gallery.html images=gallery_images %} -->
 
 ## Video Demo
 
