@@ -31,6 +31,9 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - "*.backup"
+  - debug/
+  - DEPLOYMENT_GUIDE.md
 
 # GitHub Pages compatible settings
 github: [metadata]
