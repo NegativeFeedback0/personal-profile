@@ -1,0 +1,44 @@
+<!-- Video Embed Component -->
+<!-- Usage: {% include video.html src="video.mp4" poster="thumbnail.jpg" title="Video Title" %} -->
+
+<div class="media-container">
+    {% if include.type == "youtube" %}
+    <div class="responsive-video">
+        <iframe 
+            src="https://www.youtube.com/embed/{{ include.id }}" 
+            frameborder="0" 
+            allowfullscreen
+            title="{{ include.title | default: 'Video' }}">
+        </iframe>
+    </div>
+    {% elsif include.type == "vimeo" %}
+    <div class="responsive-video">
+        <iframe 
+            src="https://player.vimeo.com/video/{{ include.id }}" 
+            frameborder="0" 
+            allowfullscreen
+            title="{{ include.title | default: 'Video' }}">
+        </iframe>
+    </div>
+    {% else %}
+    <video 
+        controls 
+        width="100%" 
+        {% if include.poster %}poster="{{ include.poster | relative_url }}"{% endif %}
+        {% if include.preload %}preload="{{ include.preload }}"{% else %}preload="metadata"{% endif %}>
+        <source src="{{ include.src | relative_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    {% endif %}
+    
+    {% if include.title or include.description %}
+    <div class="card-content">
+        {% if include.title %}
+        <h3 class="card-title">{{ include.title }}</h3>
+        {% endif %}
+        {% if include.description %}
+        <p class="card-description">{{ include.description }}</p>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>

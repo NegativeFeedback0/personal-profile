@@ -1,0 +1,39 @@
+# Site settings
+title: Your Portfolio
+description: A showcase of my projects, photos, and creative work
+baseurl: ""
+url: ""
+permalink: /:categories/:title/
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# GitHub Pages compatible settings
+github: [metadata]
+kramdown:
+  input: GFM
+  hard_wrap: false

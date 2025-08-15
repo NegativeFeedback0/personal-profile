@@ -1,0 +1,25 @@
+<!-- Fusion 360 Embed Component -->
+<!-- Usage: {% include fusion360.html src="your_fusion360_url" title="Project Name" %} -->
+
+<div class="media-container">
+    <div class="responsive-video">
+        <iframe 
+            src="{{ include.src }}" 
+            class="fusion360-embed"
+            allowfullscreen 
+            webkitallowfullscreen 
+            width="100%" 
+            height="400"
+            frameborder="0"
+            title="{{ include.title | default: 'Fusion 360 Model' }}">
+        </iframe>
+    </div>
+    {% if include.title %}
+    <div class="card-content">
+        <h3 class="card-title">{{ include.title }}</h3>
+        {% if include.description %}
+        <p class="card-description">{{ include.description }}</p>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
