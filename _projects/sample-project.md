@@ -17,7 +17,8 @@ Describe your project here. What was the goal? What challenges did you face? How
 
 Talk about your design approach and methodology.
 
-{% include fusion360.html src="https://your-fusion360-embed-url" title="3D Model View" description="Interactive 3D model of the project" %}
+<!-- Fusion 360 embed will be added here -->
+<!-- {% include fusion360.html src="https://your-fusion360-embed-url" title="3D Model View" description="Interactive 3D model of the project" %} -->
 
 ## Gallery
 
@@ -27,7 +28,8 @@ Talk about your design approach and methodology.
 
 ## Video Demo
 
-{% include video.html type="youtube" id="dQw4w9WgXcQ" title="Project Demo Video" %}
+<!-- Video will be added here -->
+<!-- {% include video.html type="youtube" id="dQw4w9WgXcQ" title="Project Demo Video" %} -->
 
 ## Results
 
